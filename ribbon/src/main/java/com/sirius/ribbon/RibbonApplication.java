@@ -13,13 +13,13 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class RibbonApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(RibbonApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(RibbonApplication.class, args);
+    }
 
-	@Bean
-	@LoadBalanced
-	RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
+    @Bean
+    @LoadBalanced
+    RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 }

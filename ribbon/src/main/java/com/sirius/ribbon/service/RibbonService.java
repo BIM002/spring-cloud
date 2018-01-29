@@ -12,10 +12,10 @@ public class RibbonService {
 
     @HystrixCommand(fallbackMethod = "sayError")
     public String sayHello(String name) {
-        return restTemplate.getForObject("http://eureka-client/hello?name="+name,String.class);
+        return restTemplate.getForObject("http://eureka-client/hello?name=" + name, String.class);
     }
 
-    public String sayError(String name){
+    public String sayError(String name) {
         return "sorry," + name;
     }
 }

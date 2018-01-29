@@ -12,7 +12,7 @@ public class RibbonController {
     RibbonService ribbonService;
 
     @RequestMapping(value = "/hello")
-    public String sayHello(@RequestParam String name){
-        return  ribbonService.sayHello(name);
+    public String sayHello(@RequestParam String name) {
+        return ribbonService.sayHello(name);
     }
 }

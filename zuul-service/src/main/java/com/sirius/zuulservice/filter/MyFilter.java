@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
 
 @Component
-public class MyFilter extends ZuulFilter{
+public class MyFilter extends ZuulFilter {
 
     private static final Logger logger = LoggerFactory.getLogger(MyFilter.class);
 
@@ -35,13 +35,13 @@ public class MyFilter extends ZuulFilter{
         HttpServletRequest request = context.getRequest();
         logger.info(String.format("%s >>> %s", request.getMethod(), request.getRequestURL().toString()));
         Object accessToken = request.getParameter("token");
-        if(accessToken == null){
+        if (accessToken == null) {
             logger.warn("token is empty");
             context.setSendZuulResponse(false);
             context.setResponseStatusCode(401);
-            try{
+            try {
                 context.getResponse().getWriter().write("token is empty");
-            }catch (Exception e){
+            } catch (Exception e) {
 
             }
             return null;

@@ -12,7 +12,7 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 @SpringBootApplication
 public class FeignServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(FeignServiceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(FeignServiceApplication.class, args);
+    }
 }
